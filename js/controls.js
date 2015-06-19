@@ -525,7 +525,7 @@ function calcRoute () {
 	var request = {
 		origin: startPos,
 		destination: endPos,
-		travelMode: google.maps.TravelMode.DRIVING
+		travelMode: google.maps.TravelMode.WALKING
 	};
 	directionsService.route ( request, function ( response, status ) {
 		if ( status == google.maps.DirectionsStatus.OK ) {
