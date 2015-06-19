@@ -512,13 +512,6 @@ function initialize () {
 	directionsDisplay.setPanel ( document.getElementById ( 'directions-panel' ) );
 }
 
-var mode = 'WALKING';
-function switchMode () {
-
-	mode = 'DRIVING'
-
-}
-
 function calcRoute () {
 	console.log ( 'finding route' );
 	var start = document.getElementById ( 'start' ).value;
@@ -532,7 +525,7 @@ function calcRoute () {
 	var request = {
 		origin: startPos,
 		destination: endPos,
-		travelMode: google.maps.TravelMode.WALKING
+		travelMode: google.maps.TravelMode.DRIVING
 	};
 	directionsService.route ( request, function ( response, status ) {
 		if ( status == google.maps.DirectionsStatus.OK ) {
